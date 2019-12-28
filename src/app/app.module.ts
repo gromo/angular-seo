@@ -27,7 +27,9 @@ const pages = [
     AppRoutingModule,
     RouterModule,
   ],
-  providers: [],
+  providers: [
+    {provide: 'window', useValue: () => window},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

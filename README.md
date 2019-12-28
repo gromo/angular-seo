@@ -1,2 +1,2 @@
 # angular-seo
-SEO in Angular 9 + prerender.io
+SEO in Angular + prerender.io

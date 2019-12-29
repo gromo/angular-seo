@@ -28,7 +28,7 @@ const pages = [
     RouterModule,
   ],
   providers: [
-    {provide: 'window', useValue: () => window},
+    {provide: 'window', useFactory: () => window},
   ],
   bootstrap: [AppComponent]
 })

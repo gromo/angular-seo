@@ -8,6 +8,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { PageAComponent } from './pages/page-a/page-a.component';
 import { PageBComponent } from './pages/page-b/page-b.component';
 import { RouterModule } from '@angular/router';
+import { SeoInterceptor } from './services/seo.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 const pages = [
   HomepageComponent,
@@ -28,6 +30,7 @@ const pages = [
     RouterModule,
   ],
   providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: SeoInterceptor, multi: true},
     {provide: 'window', useFactory: () => window},
   ],
   bootstrap: [AppComponent]

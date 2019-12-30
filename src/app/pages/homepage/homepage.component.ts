@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
-import { SeoService } from '../../services/seo.service';
+
+import { Component, OnInit } from '@angular/core';
+import { Page } from '../page';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: 'homepage.component.html',
 })
-export class HomepageComponent {
+export class HomepageComponent extends Page implements OnInit {
 
-  constructor(
-    private seoService: SeoService,
-  ) {
-    this.seoService.setTitle('Homepage');
-    this.seoService.setDescription('Homepage Description');
-    this.seoService.setCanonicalUrl('http://example.com');
+  ngOnInit() {
+    this.setTitle('Homepage');
+    this.setDescription('Homepage Description');
+    this.setCanonicalUrl('http://example.com');
   }
 }

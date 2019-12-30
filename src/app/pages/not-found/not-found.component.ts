@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { SeoService } from '../../services/seo.service';
+import { Page } from '../page';
 
 @Component({
   selector: 'app-not-found',
   templateUrl: 'not-found.component.html',
 })
-export class NotFoundComponent {
+export class NotFoundComponent extends Page implements OnInit {
 
-  constructor(
-    private seoService: SeoService,
-  ){
+  ngOnInit() {
     this.seoService.setStatusCode('404');
-    this.seoService.setTitle('Page not found');
+    this.setTitle('Page not found');
   }
 }

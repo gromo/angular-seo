@@ -1,4 +1,4 @@
-import { Component, Injector } from '@angular/core';
+import { Component } from '@angular/core';
 import { Page } from '../page';
 
 @Component({
@@ -7,10 +7,8 @@ import { Page } from '../page';
 })
 export class PageAComponent extends Page {
 
-  constructor(
-    injector: Injector,
-  ) {
-    super(injector);
+  constructor() {
+    super();
 
     this.setCanonicalUrl('http://example.com/page-a');
     this.setTitle('Page A');

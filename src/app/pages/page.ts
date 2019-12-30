@@ -1,15 +1,15 @@
 import { Router } from "@angular/router";
+import { AppInjector } from '../services/app-injector.service';
 import { SeoService } from '../services/seo.service';
-import { Injector } from '@angular/core';
 
 export class Page {
 
-  private router: Router;
-  private seoService: SeoService;
+  protected router: Router;
+  protected seoService: SeoService;
 
-  constructor(
-    injector: Injector,
-  ) {
+  constructor() {
+    const injector = AppInjector.getInjector();
+
     this.router = injector.get(Router);
     this.seoService = injector.get(SeoService);
   }

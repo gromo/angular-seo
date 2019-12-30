@@ -1,4 +1,4 @@
-import { Component, OnInit, Injector } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Page } from '../page';
 
 @Component({
@@ -6,12 +6,6 @@ import { Page } from '../page';
   templateUrl: 'page-b.component.html',
 })
 export class PageBComponent extends Page implements OnInit {
-
-  constructor(
-    injector: Injector,
-  ){
-    super(injector);
-  }
 
   ngOnInit(){
     this.setNoIndex();

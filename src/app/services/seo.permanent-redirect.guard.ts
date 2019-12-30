@@ -14,7 +14,8 @@ export class SeoPermanentRedirectGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): UrlTree {
     const url = state.url.replace(/^\/301\//, '/');
-    this.seoService.setPermanentRedirect('http://example.com' + url);
+    const permanentRedirectTo = 'http://example.com' + url.replace(/\?.*/, '');
+    this.seoService.setPermanentRedirect(permanentRedirectTo);
     return this.router.parseUrl(url);
   }
 }

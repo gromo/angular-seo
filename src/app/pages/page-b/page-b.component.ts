@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
-import { SeoService } from '../../services/seo.service';
+import { Component, OnInit, Injector } from '@angular/core';
+import { Page } from '../page';
 
 @Component({
   selector: 'app-page-b',
   templateUrl: 'page-b.component.html',
 })
-export class PageBComponent {
+export class PageBComponent extends Page implements OnInit {
 
   constructor(
-    private seoService: SeoService,
+    injector: Injector,
   ){
-    this.seoService.setNoIndex();
-    this.seoService.setTitle('Page B: noindex');
+    super(injector);
+  }
+
+  ngOnInit(){
+    this.setNoIndex();
+    this.setTitle('Page B: noindex');
   }
 }

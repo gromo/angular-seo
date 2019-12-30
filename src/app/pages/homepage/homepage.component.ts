@@ -9,7 +9,7 @@ export class HomepageComponent {
 
   constructor(
     private seoService: SeoService,
-  ){
+  ) {
     this.seoService.setTitle('Homepage');
     this.seoService.setDescription('Homepage Description');
     this.seoService.setCanonicalUrl('http://example.com');

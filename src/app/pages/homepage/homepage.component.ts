@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SeoService } from '../../services/seo.service';
 
 @Component({
@@ -12,6 +12,6 @@ export class HomepageComponent {
   ){
     this.seoService.setTitle('Homepage');
     this.seoService.setDescription('Homepage Description');
-    this.seoService.setCanonialUrl('http://example.com/');
+    this.seoService.setCanonicalUrl('http://example.com');
   }
 }

@@ -22,7 +22,7 @@ export class SeoService {
     }
   }
 
-  setCanonialUrl(url: string){
+  setCanonicalUrl(url: string){
     if (!this.document || !this.document.head || this.isNoIndex()) {
       return;
     }

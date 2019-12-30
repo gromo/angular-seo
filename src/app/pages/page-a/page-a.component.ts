@@ -10,7 +10,7 @@ export class PageAComponent {
   constructor(
     private seoService: SeoService,
   ){
-    this.seoService.setCanonialUrl('http://example.com/page-a');
+    this.seoService.setCanonicalUrl('http://example.com/page-a');
     this.seoService.setTitle('Page A');
   }
 

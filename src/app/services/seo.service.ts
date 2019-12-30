@@ -49,6 +49,11 @@ export class SeoService {
     this.setMetaContent('robots', 'noindex, follow');
   }
 
+  setPermanentRedirect(url: string){
+    this.setStatusCode('301');
+    this.setMetaContent('prerender-header', 'Location: ' + url);
+  }
+
   // https://prerender.io/documentation/best-practices
   setStatusCode(code: string){
     this.setMetaContent('prerender-status-code', code);

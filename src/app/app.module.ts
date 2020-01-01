@@ -10,6 +10,7 @@ import { PageBComponent } from './pages/page-b/page-b.component';
 import { RouterModule } from '@angular/router';
 import { SeoInterceptor } from './services/seo.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SeoComponentsModule } from './components/seo/seo.module';
 
 const pages = [
   HomepageComponent,
@@ -28,6 +29,7 @@ const pages = [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    SeoComponentsModule,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: SeoInterceptor, multi: true},

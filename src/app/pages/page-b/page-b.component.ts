@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-page-b',
@@ -7,10 +6,6 @@ import { SeoService } from '../../services/seo.service';
 })
 export class PageBComponent {
 
-  constructor(
-    private seoService: SeoService,
-  ){
-    this.seoService.setNoIndex();
-    this.seoService.setTitle('Page B: noindex');
-  }
+  pageTitle = 'Page B: noindex';
+
 }

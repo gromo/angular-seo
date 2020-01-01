@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-homepage',
@@ -7,11 +6,8 @@ import { SeoService } from '../../services/seo.service';
 })
 export class HomepageComponent {
 
-  constructor(
-    private seoService: SeoService,
-  ){
-    this.seoService.setTitle('Homepage');
-    this.seoService.setDescription('Homepage Description');
-    this.seoService.setCanonicalUrl('http://example.com');
-  }
+  pageCanonicalUrl = 'http://example.com';
+  pageDescription = 'Homepage Description';
+  pageTitle = 'Homepage';
+
 }
